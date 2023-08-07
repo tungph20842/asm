@@ -1,0 +1,40 @@
+<body>
+
+
+  <div class="row">
+      <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+        <div class="card auth">
+          <div class="card-body auth-card">
+            <div class="auth-avatar">
+              <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="user" class="user-image">
+            </div>
+            <form [formGroup]="formSignin" (ngSubmit)="onHandleSubmit()" novalidate>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="form-control" placeholder="Email" formControlName="email">
+                <div *ngIf="formSignin.get('email')?.hasError('required') && (formSignin.get('email')?.touched || formSignin.get('email')?.dirty)">
+                  Email is required
+                </div>
+                <div *ngIf="formSignin.get('email')?.hasError('email') && (formSignin.get('email')?.touched || formSignin.get('email')?.dirty)">
+                  Invalid email
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" class="form-control" placeholder="********" formControlName="password">
+                <div *ngIf="formSignin.get('password')?.hasError('required') && (formSignin.get('password')?.touched || formSignin.get('password')?.dirty)">
+                  Password is required
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" [disabled]="formSignin.invalid" class="btn btn-my">Sign In</button>
+              </div>
+              <div class="text-center login">
+                Don't have an account? <a routerLink="/signup">Sign Up</a> here.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

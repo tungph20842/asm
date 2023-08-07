@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "name": "sp1",
+      "avatar": "https://baoninhbinh.org.vn//DATA/ARTICLES/2021/5/17/cuoc-dua-lot-vao-top-100-anh-dep-di-san-van-hoa-va-thien-7edf3.jpg",
+      "price": 2000,
+      "id": 12
+    },
+    {
+      "name": "sp2",
+      "avatar": "https://i.pinimg.com/736x/7c/b5/49/7cb5492889809cb8303b76b80759f0df.jpg",
+      "price": 2,
+      "id": 13
+    }
+  ]
+}
